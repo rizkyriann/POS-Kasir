@@ -1,0 +1,68 @@
+@import '../tailadmin/src/css/style.css';
+
+@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
+@source '../../storage/framework/views/*.php';
+@source '../views/**/*.blade.php';
+@source '../tailadmin/src/**/*.html';
+
+[x-cloak] {
+    display: none !important;
+}
+
+@layer components {
+    .ta-page-header {
+        @apply mb-6 flex flex-col justify-between gap-4 sm:flex-row sm:items-end;
+    }
+
+    .ta-kicker {
+        @apply text-theme-xs font-semibold uppercase tracking-widest text-brand-500;
+    }
+
+    .ta-title {
+        @apply text-title-sm font-bold text-gray-900;
+    }
+
+    .ta-card {
+        @apply rounded-2xl border-2 border-gray-200 bg-white shadow-theme-sm;
+    }
+
+    .ta-input {
+        @apply shadow-theme-xs h-11 w-full rounded-lg border-2 border-gray-300 bg-transparent px-4 py-2.5 text-sm text-gray-800 placeholder:text-gray-400 focus:border-brand-300 focus:ring-3 focus:ring-brand-500/10 focus:outline-hidden;
+    }
+
+    .ta-btn-primary {
+        @apply inline-flex items-center justify-center rounded-lg bg-brand-500 px-4 py-2.5 text-sm font-semibold text-white hover:bg-brand-600 disabled:opacity-60;
+    }
+
+    .ta-btn-secondary {
+        @apply inline-flex items-center justify-center rounded-lg border-2 border-gray-200 bg-white px-4 py-2.5 text-sm font-semibold text-gray-700 hover:bg-gray-50;
+    }
+
+    .ta-btn-danger {
+        @apply inline-flex items-center justify-center rounded-lg bg-error-500 px-4 py-2.5 text-sm font-semibold text-white hover:bg-error-600;
+    }
+
+    .ta-table-wrap {
+        @apply overflow-hidden rounded-2xl border-2 border-gray-200 bg-white shadow-theme-sm;
+    }
+
+    .ta-table {
+        @apply w-full text-left text-sm;
+    }
+
+    .ta-table thead {
+        @apply border-b-2 border-gray-200 bg-gray-50 text-theme-xs uppercase text-gray-500;
+    }
+
+    .ta-table th {
+        @apply border-r-2 border-gray-200 px-5 py-3 font-semibold last:border-r-0;
+    }
+
+    .ta-table td {
+        @apply border-r-2 border-gray-200 px-5 py-4 align-top last:border-r-0;
+    }
+
+    .ta-table tbody tr {
+        @apply border-b-2 border-gray-200 last:border-b-0;
+    }
+}
